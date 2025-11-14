@@ -1,89 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MovimentaBus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0a043c; /* Fundo azul escuro */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    :root{
+      --bg:#0b0730;
+      --card:#fff3f3;
+      --accent:#0396ff;
+      --accent-2:#0b6df0;
     }
-
-    .container {
-      background-color: #fff6f6; /* Tom claro para o cartão */
-      width: 350px;
-      text-align: center;
-      padding: 40px 20px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    body{
+      margin:0;
+      background:var(--bg);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Inter;
     }
-
-    .logo {
-      font-size: 48px;
-      color: #007bff;
+    .card{
+      background:var(--card);
+      padding:60px 40px;
+      border-radius:20px;
+      width:350px;
+      text-align:center;
     }
-
-    .titulo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #ff8c00;
+    .logo img{
+      display:block;
+      margin:0 auto 12px;
     }
-
-    .titulo span {
-      color: #007bff;
-    }
-
-    p {
-      margin: 20px 0;
-      font-size: 16px;
-      color: #000;
-      font-weight: 500;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #005fd1;
-    }
-
-    .wifi {
-      color: #ff8c00;
-      font-size: 24px;
+    .btn{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:8px;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      color:white;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      margin-top:12px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="wifi">
-  <img src="img/wifi.svg" alt="Ícone de Wi-Fi" width="40">
-  </div>
+  <div class="card">
+    <div class="logo">
+      <img src="img/wifi.svg" width="36">
+      <img src="img/bus.svg" width="96">
+      <div style="font-weight:700;font-size:28px;color:#ff8c00">
+        Movimenta<span style="color:#007bff">Bus</span>
+      </div>
+    </div>
 
-  <div class="logo">
-  <img src="img/bus.svg" alt="Ícone de ônibus" width="100">
-  </div>
-    <div class="titulo">Movimenta<span>Bus</span></div>
-    <p>Bem Vindo ao Movimentabus!</p>
-    <button class="btn">Realizar Cadastro</button>
-    <button class="btn">Iniciar Sessão</button>
+    <a href="login.html"><button class="btn">Login</button></a>
+    <a href="cadastro.html"><button class="btn">Cadastro</button></a>
   </div>
 </body>
 </html>
+
